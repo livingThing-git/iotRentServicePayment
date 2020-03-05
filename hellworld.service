@@ -1,0 +1,14 @@
+[Unit]
+Description=helloworld service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/python3.7 -u helloworl.py
+WorkingDirectory=/home/pi/Desktop/mvp
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
